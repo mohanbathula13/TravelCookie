@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<title>Travel Cookie</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style.css')}}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+</head>
+<body>
+	{% include 'navbar.html' %}
+	<main>
+		<section>
+			<h2>Featured Destinations</h2>
+			<div class="color-bar"></div>
+			<ul class="featured-destinations">
+				<li>
+					<a href="{{ url_for('BANGKOK') }}">
+						<img src="{{ url_for('static', filename='images/bangkok_card.jpg')}}" width="300" height="300">
+						<h3>Bangkok</h3>
+					</a>
+				</li>
+				<li>
+					<a href="{{ url_for('Rome') }}">
+						<img src="{{ url_for('static', filename='images/rome_Card.jpg')}}" width="300" height="300">
+						<h3>Rome</h3>
+					</a>
+				</li>
+				<li>
+					<a href="{{ url_for('zurich') }}">
+						<img src="{{ url_for('static', filename='images/zurich_card.jpg')}}" width="300" height="300">
+						<h3>Zurich</h3>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<br>
+		<section>
+			<h2>Featured Countries</h2>
+			<div class="color-bar"></div>
+			<ul class="featured-destinations">
+				<li>
+					<a href="{{ url_for('Italy') }}">
+						<img src="{{ url_for('static', filename='images/italy_card.jpg')}}"width="300" height="300">
+						<h3>Italy</h3>
+					</a>
+				</li>
+				<li>
+					<a href="{{ url_for('switzerland') }}">
+						<img src="{{ url_for('static', filename='images/swiss_card.jpg')}}" width="300" height="300">
+						<h3>Switzerland</h3>
+					</a>
+				</li>
+				<li>
+					<a href="{{ url_for('Thailand') }}">
+						<img src="{{ url_for('static', filename='images/thai_card.jpg')}}" width="300" height="300">
+						<h3>Thailand</h3>
+					</a>
+				</li>
+			</ul>
+		</section>
+	
+	<section>
+	<div id="chart-container">
+	<h2>Popular Countries by Visitors</h2>
+	<div class="color-bar"></div>
+	<canvas id="barchartexample" width="300" height="130"></canvas>
+	<script>
+		new Chart(document.getElementById("barchartexample"), {
+		  type: 'bar',
+		  data: {
+			labels: ["Italy", "Thailand", "Switzerland", "United Arab Emirates", "Brazil"],
+			datasets: [
+			  {
+				label: "Visitors (millions)",
+				backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+				data: [778934, 576267, 238934, 758084, 405733]
+			  }
+			]
+		  },
+		  options: {
+			maintainAspectRatio: false,
+      		responsive: true,
+			legend: { display: false },
+			title: {
+			  display: true,
+			  text: 'Popular Countries by Visitor Count (millions) in a year'
+			}
+			
+		  }
+		});
+		
+	  </script>
+	  </div>
+	  </section>
+	</main>
+	{% include 'footer.html' %}
+</body>

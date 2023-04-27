@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel Tips - Travel Cookie</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/traveltips.css')}}">
+	<style>
+		body {
+  color: #333;
+  padding-top: 120px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  background-color: #f7f7f7;
+  background-image: url('{{ url_for('static', filename='images/travelt.jpg')}}');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+	</style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+	<div class="content">      
+	<main>
+		<section>
+			<h2>Packing Tips</h2>
+			<p>Some useful tips for packing:</p>
+			<ul>
+				<li>Make a packing list</li>
+				<li>Roll your clothes to save space</li>
+				<li>Put heavy items at the bottom of your suitcase</li>
+			</ul>
+		</section>
+		
+		<section>
+			<h2>Transportation Tips</h2>
+			<p>Here are some tips for getting around:</p>
+			<ul>
+				<li>Research transportation options ahead of time</li>
+				<li>Book tickets in advance if possible</li>
+				<li>Use public transportation to save money</li>
+			</ul>
+		</section>
+		
+		<section>
+			<h2>Accommodation Tips</h2>
+			<p>Here are some tips for finding the perfect place to stay:</p>
+			<ul>
+				<li>Check reviews before booking</li>
+				<li>Consider alternative accommodations like hostels or Airbnb</li>
+				<li>Look for deals and promotions</li>
+			</ul>
+		</section>
+		
+		<section>
+			<h2>Money Saving Tips</h2>
+			<p>Here are some tips for saving money on your travels:</p>
+			<ul>
+				<li>Eat like a local</li>
+				<li>Use travel reward programs</li>
+				<li>Travel during off-peak season</li>
+			</ul>
+		</section>
+		<section>
+			<h2>20 Quick Travel Tips for Your Next Adventure</h2>
+		<ol>
+			<li>Plan your trip ahead of time</li>
+			<li>Pack light</li>
+			<li>Stay hydrated</li>
+			<li>Learn the local customs</li>
+			<li>Be respectful of the environment</li>
+			<li>Stay safe</li>
+			<li>Connect with locals</li>
+			<li>Try local cuisine</li>
+			<li>Take photos and document your trip</li>
+			<li>Enjoy the journey</li>
+			<li>Use public transportation</li>
+			<li>Be flexible</li>
+			<li>Learn some basic phrases in the local language</li>
+			<li>Respect cultural differences</li>
+			<li>Get off the beaten path</li>
+			<li>Invest in quality gear</li>
+			<li>Use travel apps</li>
+			<li>Take care of your health</li>
+			<li>Be mindful of your impact</li>
+			<li>Have fun!</li>
+		</ol>
+			</section>
+	</main>
+</div>
+{% include 'footer.html' %}
+
+</body>
+</html>

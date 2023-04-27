@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>St. Mark's Basilica</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style_city.css')}}">
+    </head>
+<body>
+	{% include 'navbar.html' %}
+	<main>
+		<div class="container">
+			<p>St. Mark's Basilica, also known as Basilica di San Marco, is a stunning cathedral located in the heart of Venice, Italy. It is widely considered one of the finest examples of Byzantine architecture in the world, and is a must-see attraction for visitors to Venice.</p>
+			<h2>Things to See and Do at St. Mark's Basilica</h2>
+			<ul class="destinations">
+				<li>
+					<h2>Marvel at the Basilica's Exterior</h2>
+					<p>The exterior of St. Mark's Basilica is a magnificent sight to behold. Its striking blend of Byzantine and Western architecture features intricate mosaics, marble columns, and ornate carvings.</p>
+					<img src="{{ url_for('static', filename='images/stmark_exterior.jpg')}}" alt="St. Mark's Basilica Exterior" class="dest-img">
+				</li>
+				<li>
+					<h2>Admire the Golden Mosaics</h2>
+					<p>Inside the basilica, visitors can marvel at the stunning golden mosaics that cover the ceilings and walls. These mosaics depict scenes from the Bible and the life of St. Mark, and are considered some of the finest examples of Byzantine art in the world.</p>
+					<img src="{{ url_for('static', filename='images/stmark_mosaics.jpg')}}" alt="St. Mark's Basilica Mosaics" class="dest-img">
+				</li>
+				<li>
+					<h2>Climb to the Top of the Basilica</h2>
+					<p>For breathtaking views of Venice, visitors can climb to the top of the basilica's bell tower. The tower stands over 300 feet tall, and offers stunning panoramic views of the city and the surrounding lagoon.</p>
+					<img src="{{ url_for('static', filename='images/stmark_belltower.jpg')}}" alt="St. Mark's Basilica Bell Tower" class="dest-img">
+				</li>
+			</ul>
+		</div>
+	</main>
+	{% include 'footer.html' %}
+</body>
+</html>

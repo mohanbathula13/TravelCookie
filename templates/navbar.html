@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+        <title>Travel Cookie</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style.css')}}">
+    </head>
+    <body>
+
+<nav>
+
+ <ul>
+
+ <a href="{{ url_for('index') }}"><li class="logo"><img src="{{ url_for('static', filename='images/logo.jpg')}}" width="50" height="50"><span>Travel</span> Cookie</li></a>
+
+ <li><a href="{{ url_for('index') }}">Home</a></li>
+
+<li><a href="#">Destinations</a>
+
+ <ul class="dropdown-menu">
+
+<li><a href="{{ url_for('Venice') }}">Venice</a></li>
+
+<li><a href="{{ url_for('Geneva') }}">Geneva</a></li>
+
+ <li><a href="{{ url_for('intrerlaken') }}">Interlaken</a></li>
+
+<li><a href="{{ url_for('PHUKET') }}">Phuket</a></li>
+
+<li><a href="{{ url_for('CHAING_MAI') }}">Chiang Mai</a></li>
+
+<li><a href="{{ url_for('BANGKOK') }}">Bangkok</a></li>
+
+ </ul></li>
+
+<li><a href="{{ url_for('traveltips') }}">Travel Tips</a></li>
+
+ <li>
+  {% if 'Email' in session %}
+  <a href="#">&nbspBook&nbsp&nbsp&nbsp</a>
+  <ul class="dropdown-menu">
+
+    <li><a href="https://www.google.com/travel/flights" target="_blank">Flights</a></li>
+    
+    <li><a href="https://www.booking.com/" target="_blank">Hotels</a></li>
+    
+     <li><a href="https://www.rome2rio.com/" target="_blank">Map</a></li>
+    
+     </ul>
+  {% else %}
+  <a href="{{ url_for('aboutus') }}">About Us</a>
+  {% endif %}
+  
+</li>
+
+<li>
+    {% if 'Email' in session %}
+    <a href="#">{{msg}}</a>
+    <ul class="dropdown-menu">
+
+    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+    
+     </ul>
+  {% else %}
+  <a href="{{ url_for('login') }}">Login</a>
+  {% endif %}
+
+</li>
+
+ </ul>
+
+</nav>
+
+</body>

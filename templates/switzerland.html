@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<title>Switzerland</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style_country.css')}}">
+</head>
+<body>
+	{% include 'navbar.html' %}
+	<main>
+		<section>
+			<h2>Popular Cities in Switzerland</h2>
+			<div class="color-bar"></div>
+			<ul class="featured-destinations">
+				<li>
+					<a href="{{ url_for('zurich') }}">
+						<img src="{{ url_for('static', filename='images/zurich_card.jpg')}}" width="300" height="300">
+						<h3>Zurich</h3>
+					</a>
+				</li>
+				<li>
+					<a href="{{ url_for('Geneva') }}">
+						<img src="{{ url_for('static', filename='images/Geneva_card.jpg')}}" width="300" height="300">
+						<h3>Geneva</h3>
+					</a>
+				</li>
+				<li>
+					<a href="{{ url_for('intrerlaken') }}">
+						<img src="{{ url_for('static', filename='images/interlaken_card.jpg')}}" width="300" height="300">
+						<h3>Interlaken</h3>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</main>
+	{% include 'footer.html' %}
+</body>	
+</html>

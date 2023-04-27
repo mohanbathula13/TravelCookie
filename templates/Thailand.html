@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thailand</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style_country.css')}}">
+</head>
+<body>
+	{% include 'navbar.html' %}
+	<main>
+		<section>
+			<h2>Popular Cities in Thailand</h2>
+			<div class="color-bar"></div>
+			<ul class="featured-destinations">
+				<li>
+					<a href="{{ url_for('BANGKOK') }}">
+						<img src="{{ url_for('static', filename='images/bangkok_card.jpg')}}" width="300" height="300">
+						<h3>Bangkok</h3>
+					</a>
+				</li>
+				<li>
+					<a href="{{ url_for('PHUKET') }}">
+						<img src="{{ url_for('static', filename='images/phuket_card.jpg')}}" width="300" height="300">
+						<h3>Phuket</h3>
+					</a>
+				</li>
+				<li>
+					<a href="{{ url_for('CHAING_MAI') }}">
+						<img src="{{ url_for('static', filename='images/chiangmai_card.jpg')}}" width="300" height="300">
+						<h3>Chiang Mai</h3>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</main>
+	{% include 'footer.html' %}
+</body>
+</html>

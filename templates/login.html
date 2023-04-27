@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta charset="utf-8" />
+	<title>Travel Cookie - Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/login.css')}}">
+    <style>
+      body {
+    background-image: url("{{ url_for('static', filename='images/login.jpg')}}");
+    background-size: cover;
+    position: relative;
+  }
+    </style>
+</head>
+<body>
+	{% include 'navbar.html' %}
+    <div class="container">
+        <form id="login-form" class="login-form" method="POST" action="{{ url_for('userlogin') }}">
+          {{ msg }} 
+          <h2>Log in</h2>
+          <div class="form-control">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="login-email" required>
+          </div>
+          <div class="form-control">
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+            <span class="show-password" onclick="togglePassword('login-password')">Show</span>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <p class="signup-link">Don't have an account? <a href="#" onclick="switchForm()">Sign up</a></p>
+        </form>
+
+        <form id="signup-form" class="signup-form" action="{{ url_for('signup') }}" method="POST">
+            <h2>Sign Up</h2>
+            <div class="form-control">
+              <label for="signup-name">Name:</label>
+              <input type="text" id="signup-name" name="signup-name" required>
+            </div>
+            <div class="form-control">
+              <label for="signup-email">Email:</label>
+              <input type="email" id="signup-email" name="signup-email" required>
+            </div>
+            <div class="form-control">
+              <label for="signup-password">Password:</label>
+              <input type="password" id="signup-password" name="signup-password" required>
+              <span class="show-password" onclick="togglePassword('signup-password')">Show</span>
+            </div>
+            
+            <button type="submit" class="btn btnon">Sign Up</button>
+            <p class="login-link">Already have an account? <a href="#" onclick="switchForm()">Login</a></p>
+          </form>
+    </div>
+    <script src="{{ url_for('static', filename='JS/login.js')}}"></script>
+      {% include 'footer.html' %}
+</body>
++

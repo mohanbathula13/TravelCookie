@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+		<title>Venice</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style_city.css')}}">
+    </head>
+<body>
+	{% include 'navbar.html' %}
+	<main>
+		<div class="container">
+			<p>Venice is a beautiful city in northeastern Italy, known for its canals, art, and architecture. There are many things to see and do in Venice, including:</p>
+			<h2>Places to Visit in Venice</h2>
+			<ul class="destinations">
+				<li>
+					<a href="{{ url_for('BASILICA') }}"><h2>St. Mark's Basilica</h2></a>
+					<p>St. Mark's Basilica is a stunning example of Byzantine architecture and is one of the most famous churches in Venice. It is located in St. Mark's Square and features beautiful mosaics and intricate design details.</p>
+					<img src="{{ url_for('static', filename='images/venice_basilica.jpg')}}" alt="St. Mark's Basilica" class="dest-img">
+				</li>
+				<li>
+					<a href="{{ url_for('DOGE') }}"><h2>The Doge's Palace</h2></a>
+					<p>The Doge's Palace is a beautiful Gothic palace that served as the residence of the Doge of Venice. It is located on St. Mark's Square and features stunning architecture and artwork, including works by famous Venetian painters such as Tintoretto and Veronese.</p>
+					<img src="{{ url_for('static', filename='images/venice_doge_palace.jpg')}}" alt="Doge's Palace" class="dest-img">
+				</li>
+				<li>
+					<a href="{{ url_for('RIALTO') }}"><h2>The Rialto Bridge</h2></a>
+					<p>The Rialto Bridge is one of the most iconic landmarks in Venice and is one of the oldest bridges spanning the Grand Canal. It features stunning architecture and offers beautiful views of the canal and surrounding buildings.</p>
+					<img src="{{ url_for('static', filename='images/venice_rialto.jpg')}}" alt="Rialto Bridge" class="dest-img">
+				</li>
+			</ul>
+		</div>
+	</main>
+	{% include 'footer.html' %}
+</body>
+</html>
