@@ -69,6 +69,17 @@ def Italy():
 def Milan():
     return render_template("Milan.html")
 
+@app.route("/Duomo_Milan")
+def Duomo_Milan():
+    return render_template("Duomo_Milan.html")
+
+@app.route("/VITTORIO")
+def VITTORIO():
+    return render_template("THE GALLERIA VITTORIO EMANUELE II.html")
+
+@app.route("/the_last_supper")
+def the_last_supper():
+    return render_template("the_last_supper.html")
 @app.route("/switzerland")
 def switzerland():
     return render_template("switzerland.html")
@@ -93,6 +104,17 @@ def CHOCOLATERIE():
 def intrerlaken():
     return render_template("intrerlaken.html")
 
+@app.route("/Jungfraujoch")
+def Jungfraujoch():
+    return render_template("Jungfraujoch.html")
+
+@app.route("/BRIENZ")
+def BRIENZ():
+    return render_template("LAKE BRIENZ.html")
+
+@app.route("/KULM")
+def KULM():
+    return render_template("HARDER KULM.html")
 @app.route("/Thailand")
 def Thailand():
     return render_template("Thailand.html")
@@ -101,11 +123,33 @@ def Thailand():
 def PHUKET():
     return render_template("PHUKET.html")
 
+@app.route("/phi_phi_island")
+def phi_phi_island():
+    return render_template("phi_phi_island.html")
+
+@app.route("/big_budha")
+def big_budha():
+    return render_template("big_budha.html")
+
+@app.route("/bangla_road")
+def bangla_road():
+    return render_template("bangla_road.html")
+
 @app.route("/CHAING_MAI")
 def CHAING_MAI():
     return render_template("CHAING_MAI.html")
 
+@app.route("/Suthep")
+def Suthep():
+    return render_template("Doi Suthep.html")
 
+@app.route("/Night")
+def Night():
+    return render_template("Night Bazaar.html")
+
+@app.route("/ELEPHANT")
+def ELEPHANT():
+    return render_template("ELEPHANT NATURE PARK.html")
 @app.route("/zurich")
 def zurich():
     return render_template("zurich.html")
@@ -194,6 +238,7 @@ def userlogin():
         if user:
             session['Email'] = Email
             session['user'] = user
+            session['usename'] = user[0]
             msg = user[0]
             return render_template('index.html', msg=msg)
         else:

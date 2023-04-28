@@ -57,7 +57,7 @@
 
 <li>
     {% if 'Email' in session %}
-    <a href="#">{{msg}}</a>
+    <a href="#">{{session['username']}}</a>
     <ul class="dropdown-menu">
 
     <li><a href="{{ url_for('logout') }}">Logout</a></li>
